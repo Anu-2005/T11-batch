@@ -1,6 +1,4 @@
-print("Welcome to The Cloud Computing Lab") 
-print("Here we are dealing with Google Cloud Engine") 
- 
+
 # Console-based application example 
 def display_menu(): 
     print("\n===== Cloud Console Application =====") 
