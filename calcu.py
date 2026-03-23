@@ -1,51 +1,55 @@
-def add(x, y):
-    return x + y
-
-def subtract(x, y):
-    return x - y
-
-def multiply(x, y):
-    return x * y
-
-def divide(x, y):
-    if y == 0:
-        return "Error! Division by zero."
-    return x / y
-
-print("Select operation:")
-print("1. Add")
-print("2. Subtract")
-print("3. Multiply")
-print("4. Divide")
-
-while True:
-    choice = input("Enter choice (1/2/3/4): ")
-
-    if choice in ('1', '2', '3', '4'):
-        try:
-            num1 = float(input("Enter first number: "))
-            num2 = float(input("Enter second number: "))
-        except ValueError:
-            print("Invalid input. Please enter numeric values.")
-            continue
-
-        if choice == '1':
-            print(f"{num1} + {num2} = {add(num1, num2)}")
-
-        elif choice == '2':
-            print(f"{num1} - {num2} = {subtract(num1, num2)}")
-
-        elif choice == '3':
-            print(f"{num1} * {num2} = {multiply(num1, num2)}")
-
-        elif choice == '4':
-            print(f"{num1} / {num2} = {divide(num1, num2)}")
-
-        # Ask user if they want another calculation
-        next_calculation = input("Do another calculation? (yes/no): ")
-
-        if next_calculation.lower() != 'yes':
-            break
-
-    else:
-        print("Invalid Input")
+print("Welcome to The Cloud Computing Lab") 
+print("Here we are dealing with Google Cloud Engine") 
+ 
+# Console-based application example 
+def display_menu(): 
+    print("\n===== Cloud Console Application =====") 
+    print("1. Display Welcome Message") 
+    print("2. Perform Addition") 
+    print("3. Display System Information") 
+    print("4. Exit") 
+ 
+def welcome_message(): 
+    print("\nWelcome! This program demonstrates a simple console application.") 
+    print("It can be used while learning cloud deployment concepts.") 
+ 
+def perform_addition(): 
+    try: 
+        num1 = float(input("Enter first number: ")) 
+        num2 = float(input("Enter second number: ")) 
+        result = num1 + num2 
+        print("Result:", result) 
+    except ValueError: 
+        print("Invalid input! Please enter numeric values.") 
+ 
+def system_info(): 
+    import platform 
+    print("\nSystem Information") 
+    print("Operating System:", platform.system()) 
+    print("OS Version:", platform.version()) 
+    print("Processor:", platform.processor()) 
+ 
+def main(): 
+    while True: 
+        display_menu() 
+        choice = input("Enter your choice: ") 
+ 
+        if choice == "1": 
+            welcome_message() 
+ 
+        elif choice == "2": 
+            perform_addition() 
+ 
+        elif choice == "3": 
+            system_info() 
+ 
+        elif choice == "4": 
+            print("Exiting program...") 
+            break 
+ 
+        else: 
+            print("Invalid choice! Please try again.") 
+Bhagyashree Mataghare         TCOD15 
+if __name__ == "__main__": 
+print("Starting Program1 Console Application...") 
+main()
